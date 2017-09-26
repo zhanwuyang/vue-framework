@@ -1,0 +1,57 @@
+.whiteLine,.formBg{
+    background:#fff;
+}
+.popBg{
+    background:#ebebeb;
+}
+.inputBg{
+    background:url('../image/common/input.jpg') no-repeat;
+    background-size: 100% 100%;
+    font-size: 12px;
+    padding-left: 10px;
+    line-height: 21px;
+    color:#bbb;
+}
+::-webkit-input-placeholder{
+    color:#bbb;
+}
+.active1_area{
+    background: url('../image/common/textareaBg.jpg') no-repeat;
+    background-size:100% 100%;
+}
+.active1_content{
+    outline: none;
+    background:transparent;
+    resize:none;
+    font-size: 12px;
+    color:#ccc;
+    padding:5px;
+}
+
+.imgRotate{
+    -webkit-animation-name: imgR ;
+}
+@-webkit-keyframes imgR{
+    0%{
+        -webkit-transform: rotateY(90deg);
+    }
+    100%{
+        -webkit-transform: rotateY(0deg);
+    }
+}
+.sex{
+    text-align: left;
+}
+.colorB{
+    color:#bbb;
+}
+.music{
+    width:25px;
+    height:25px;
+    background:url('../image/common/play.png') no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index:1000;
+    right:30px;
+    top:40px;
+}

@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/** {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}*/
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+
+html {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-size: cover;
+    font-size: 11px;
+    z-index: 100;
+    text-align: center;
+    line-height: 100%;
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    z-index: 10001;
+    background:black;
+}
+
+#loader #loader_data {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    display: block;
+    width: 100px;
+    margin-left: -50px;
+    text-align: center;
+    color: #fff;
+}
+
+#loader img {
+    width: 120px;
+    height: 240px;
+    top: 50%;
+    left: 50%;
+    margin-left: -60px;
+    margin-top: -140px;
+    position: absolute;
+
+}
+
+.layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-origin: 0 0;
+    overflow: hidden;
+}
+
+.layer > .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-transform-origin: 0 0;
+}
+
+.layer > .container * {
+    position: absolute;
+    display: block;
+}
+
+@-webkit-keyframes rotation {
+    10% {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg)
+    }
+    50%,
+    60% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg)
+    }
+    90% {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg)
+    }
+    100% {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg)
+    }
+}
+
+@media screen and (orientation: portrait) {
+    /*竖屏 css*/
+    .block {
+        display: none;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    /*横屏 css*/
+    .block {
+        z-index: 10999;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #333;
+        color: #fff;
+        text-align: center;
+        line-height: 100vh;
+    }
+
+    #rotate_img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -34px;
+        margin-top: -54px;
+        display: inline-block;
+        width: 67px;
+        height: 109px;
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -webkit-animation: rotation infinite 1.5s ease-in-out;
+        -webkit-background-size: 67px;
+        background-size: 67px;
+        background-image: url(../image/common/rotate_lock.png);
+    }
+
+    #rotate_txt {
+        top: 35%;
+        position: absolute;
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        margin-top: 80px;
+        padding: 10%;
+        width: 80%;
+        line-height: 24px;
+    }
+}
+.disNone{
+    /*display:none!important;*/
+}
